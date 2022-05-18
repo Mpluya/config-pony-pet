@@ -48,7 +48,7 @@ spec:
         - name: org.springframework.cloud.bindings.boot.enable
           value: "true"
         - name: JAVA_TOOL_OPTIONS
-          value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
+          value: -Dorg.springframework.cloud.bindings.boot.enable=true -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
         image: index.docker.io/tapsme/pony-pet-default@sha256:92a38f5e058260ac6556ee68eec4f92870450b7643acf36539de1dfa918c0030
         livenessProbe:
           httpGet:
