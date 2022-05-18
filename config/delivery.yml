@@ -46,7 +46,7 @@ spec:
         - name: SPRING_PROFILES_ACTIVE
           value: postgres
         - name: JAVA_TOOL_OPTIONS
-          value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
+          value: -Dlogging.level.org.springframework=DEBUG -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
         image: index.docker.io/tapsme/pony-pet-default@sha256:606dbce4d0a8ef43099b781072d07eb9e28dd4b303b82da4a6c9a6d2569c0a41
         livenessProbe:
           httpGet:
