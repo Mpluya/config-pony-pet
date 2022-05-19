@@ -47,7 +47,7 @@ spec:
           value: postgres
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/pony-pet-default@sha256:fc9cb772d12f3aaa30f89d596a2e54a381c27f11688caa431108bc7746eae3b7
+        image: index.docker.io/tapsme/pony-pet-default@sha256:98895d5bebf0814f72cdb7ea78e4cd2b68ac78138d8f50d19ef73793600c1245
         livenessProbe:
           httpGet:
             path: /livez
