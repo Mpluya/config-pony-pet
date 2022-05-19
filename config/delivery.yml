@@ -13,7 +13,7 @@ spec:
       annotations:
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
-        boot.spring.io/version: 2.7.0
+        boot.spring.io/version: 2.6.6
         conventions.apps.tanzu.vmware.com/applied-conventions: |-
           spring-boot-convention/spring-boot
           spring-boot-convention/spring-boot-graceful-shutdown
@@ -26,8 +26,8 @@ spec:
           appliveview-sample/app-live-view-appflavours
           appliveview-sample/app-live-view-systemproperties
         developer.conventions/target-containers: workload
-        services.conventions.apps.tanzu.vmware.com/mysql: mysql-connector-java/8.0.29
-        services.conventions.apps.tanzu.vmware.com/postgres: postgresql/42.3.5
+        services.conventions.apps.tanzu.vmware.com/mysql: mysql-connector-java/8.0.28
+        services.conventions.apps.tanzu.vmware.com/postgres: postgresql/42.3.3
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: pony-pet
@@ -47,7 +47,7 @@ spec:
           value: postgres
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s"
-        image: index.docker.io/tapsme/pony-pet-default@sha256:1bbb8a53724806e68b9004d77e8cc9bed24c78b716d026dc39210deec3ddeb7b
+        image: index.docker.io/tapsme/pony-pet-default@sha256:7e8596de9e76cfc4cb6f72da39a0ec57a7551c7c3a8f26bb599c79805eb54fc5
         livenessProbe:
           httpGet:
             path: /livez
