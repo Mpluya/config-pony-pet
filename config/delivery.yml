@@ -67,7 +67,7 @@ spec:
           runAsUser: 1000
       serviceAccountName: default
   traffic:
-  - configurationName: pony-pet
+  - revisionName: pony-pet-00001
     percent: 0
     tag: staging
   - revisionName: pony-pet-00001
