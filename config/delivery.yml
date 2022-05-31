@@ -66,4 +66,8 @@ spec:
         securityContext:
           runAsUser: 1000
       serviceAccountName: default
+traffic:
+- configurationName: pony-pet
+  percent: 0
+  tag: staging
 
